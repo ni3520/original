@@ -46,4 +46,5 @@
 　＊wheneverをつかって通知機能を実装する
 　＊simple_calenderを使ってカレンダー機能を実装する
 
-
+画面遷移図
+https://www.figma.com/design/QAVlIcmEyWqFJSFIJGsj85/Untitled?node-id=0-1&t=UlpNtQu6ffJZgzSX-1
