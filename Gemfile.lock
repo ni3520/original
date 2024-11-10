@@ -374,7 +374,7 @@ DEPENDENCIES
   solid_cable
   solid_cache
   solid_queue
-  sorcery (= 0.16.3)
+  sorcery
   stimulus-rails
   thruster
   turbo-rails
