@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* タイトルのスタイル */
+.title {
+  text-align: center;  /* 中央揃え */
+  font-size: 36px;      /* 少し大きめ */
+  margin-top: 200px;      /*タイトルの上の間隔*/
+  margin-bottom: 50px;  /* ボタンとの間隔を空ける */
+  font-weight: bold;      /* 太文字 */
+}
+
+/* ボタンのコンテナのスタイル */
+.buttons-container {
+  display: flex;
+  flex-direction: column;  /* 縦に並べる */
+  justify-content: center; /* 中央揃え */
+  align-items: center;     /* 中央揃え */
+  height: 90vh;           /* 画面全体の高さを使う */
+  gap: 100px;               /* ボタン間の間隔 */
+}
+
+/* ボタンのスタイル */
+.btn-green {
+  display: inline-block;
+  padding: 15px 30px;   /* ボタンの大きさ */
+  background-color: #28a745; /* 緑色 */
+  color: #000;          /* 黒文字 */
+  text-align: center;
+  text-decoration: none;  /* リンクの下線を消す */
+  border-radius: 5px;     /* ボタンの角を丸く */
+  font-size: 18px;        /* ボタンの文字サイズ */
+  font-weight: bold;      /* 太文字 */
+}
+
+.btn-green:hover {
+  background-color: #218838; /* ホバー時の色 */
+}
