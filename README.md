@@ -32,9 +32,9 @@
   MVP
   *会員登録
   ＊ログイン
-  ＊取組一覧
-  ＊取組ページ（カレンダー）
-  ＊今日の記録
+  ＊課題一覧
+  ＊課題ページ（カレンダー）
+  ＊1日の記録
 
   その後
   ＊通知
@@ -45,9 +45,3 @@
 
 　＊wheneverをつかって通知機能を実装する
 　＊simple_calenderを使ってカレンダー機能を実装する
-
-画面遷移図
-https://www.figma.com/design/QAVlIcmEyWqFJSFIJGsj85/Untitled?node-id=0-1&t=UlpNtQu6ffJZgzSX-1
-
-ER図
-[![Image from Gyazo](https://i.gyazo.com/6acb9870900e5e997b80a3578b28d3d4.png)](https://gyazo.com/6acb9870900e5e997b80a3578b28d3d4)
