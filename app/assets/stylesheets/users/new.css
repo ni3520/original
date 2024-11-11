@@ -41,7 +41,7 @@ h1 {
 .btn {
   width: 100%; /* ボタンを幅いっぱいに */
   padding: 10px; /* 内側の余白を設定 */
-  background-color: #007bff; /* ボタンの背景色 */
+  background-color: #23a441; /* ボタンの背景色 */
   color: white; /* ボタンの文字色 */
   border: none; /* ボーダーなし */
   border-radius: 5px; /* 角を丸く */
@@ -49,7 +49,7 @@ h1 {
 }
 
 .btn:hover {
-  background-color: #0056b3; /* ホバー時の色 */
+  background-color: #218838; /* ホバー時の色 */
 }
 
 .text-center {
