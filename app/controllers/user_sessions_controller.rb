@@ -4,11 +4,12 @@ class UserSessionsController < ApplicationController
   def new; end
 
   def create
-    @user = login(params[:email], params[:password])
+    @user = login(params[:email], params[:password]) # loginメソッドで認証
 
     if @user
-      redirect_to goals_path
+      redirect_to goals_path, notice: 'ログインに成功しました'
     else
+      flash.now[:alert] = 'メールアドレスまたはパスワードが正しくありません'
       render :new
     end
   end
