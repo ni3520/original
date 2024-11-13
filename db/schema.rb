@@ -15,7 +15,7 @@ ActiveRecord::Schema[8.0].define(version: 2024_11_12_110105) do
   enable_extension "pg_catalog.plpgsql"
 
   create_table "goals", force: :cascade do |t|
-    t.integer "user_id"
+    t.bigint "user_id"
     t.string "title", null: false
     t.string "unit"
     t.integer "level_1_value"
@@ -23,6 +23,7 @@ ActiveRecord::Schema[8.0].define(version: 2024_11_12_110105) do
     t.integer "level_3_value"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_goals_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -34,4 +35,6 @@ ActiveRecord::Schema[8.0].define(version: 2024_11_12_110105) do
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
   end
+
+  add_foreign_key "goals", "users"
 end

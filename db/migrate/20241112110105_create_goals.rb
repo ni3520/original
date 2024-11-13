@@ -1,7 +1,7 @@
 class CreateGoals < ActiveRecord::Migration[8.0]
   def change
     create_table :goals do |t|
-      t.integer :user_id
+      t.references :user, foreign_key: true
       t.string :title, null:false
       t.string :unit
       t.integer :level_1_value
