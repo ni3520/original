@@ -1,0 +1,12 @@
+.header {
+  background-color: rgb(234, 160, 70); /* 背景をオレンジに */
+  display: flex; /* フレックスボックスで配置 */
+  justify-content: space-between; /* 左右に配置 */
+  padding: 30px; /* 余白を追加 */
+  font-weight: bold;      /* 太文字 */
+}
+
+.h1 {
+  font-size: 40px;      /* 少し大きめ */
+  font-weight: bold;      /* 太文字 */
+}

@@ -7,9 +7,7 @@ class UserSessionsController < ApplicationController
     @user = login(params[:email], params[:password]) # loginメソッドで認証
 
     if @user
-      redirect_to goals_path, notice: 'ログインに成功しました'
-    else
-      flash.now[:alert] = 'メールアドレスまたはパスワードが正しくありません'
+      redirect_to goals_path
       render :new
     end
   end
