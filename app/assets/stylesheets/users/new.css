@@ -30,9 +30,9 @@ h1 {
 }
 
 /* ボタンのスタイル */
-.btn-primary {
-  display: flex;    /*フレックスボックスを使用*/
-  padding: 15px 30px;   /* ボタンの大きさ */
+.btn-green {
+  display: inline-block;    /*フレックスボックスを使用*/
+  padding: 15px 40px;   /* ボタンの大きさ */
   background-color: #28a745; /* 緑色 */
   color: #000;          /* 黒文字 */
   text-align: center;
@@ -42,9 +42,6 @@ h1 {
   font-weight: bold;      /* 太文字 */
 }
 
-.btn-green{
-  display: inline-block;
-}
 /* ログインリンクのスタイル */
 .text-center {
   margin-top: 20px; /* 上の余白 */

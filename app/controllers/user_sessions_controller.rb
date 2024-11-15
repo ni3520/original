@@ -8,6 +8,7 @@ class UserSessionsController < ApplicationController
 
     if @user
       redirect_to goals_path
+    else
       render :new
     end
   end

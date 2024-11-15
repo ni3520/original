@@ -17,10 +17,9 @@ ActiveRecord::Schema[8.0].define(version: 2024_11_12_110105) do
   create_table "goals", force: :cascade do |t|
     t.bigint "user_id"
     t.string "title", null: false
-    t.string "unit"
-    t.integer "level_1_value"
-    t.integer "level_2_value"
-    t.integer "level_3_value"
+    t.string "level_1_value"
+    t.string "level_2_value"
+    t.string "level_3_value"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_goals_on_user_id"
