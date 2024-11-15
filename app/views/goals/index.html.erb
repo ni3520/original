@@ -1,0 +1,23 @@
+<header class="header">
+  <%= link_to '取組追加', '/add_goal', class: 'add-button' %>
+  <%= link_to 'ログアウト', root_path, class: 'logout-button' %>
+</header>
+
+<h1 class="h1">取組一覧</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>タイトル</th>
+      <th>作成日</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @goals.each do |goal| %>
+      <tr>
+        <th style="writing-mode: vertical-rl; text-align: left;"><%= goal.title %></th>
+        <td><%= goal.created_at.strftime("%Y年%m月%d日") %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

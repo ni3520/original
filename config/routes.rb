@@ -6,9 +6,10 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
   root to: 'homes#top'
   resources :users, only: %i[new create]
+  resources :goals
   get 'login', to: 'user_sessions#new'
   post 'login', to: 'user_sessions#create'
-  
+  delete 'logout', to: 'user_sessions#destroy'
 
   # Render dynamic PWA files from app/views/pwa/* (remember to link manifest in application.html.erb)
   # get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
