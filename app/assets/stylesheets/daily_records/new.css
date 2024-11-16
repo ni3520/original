@@ -1,0 +1,14 @@
+.btn-submit {
+  background-color: rgb(234, 160, 70);
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* 背景色の変更をスムーズに */
+}
+
+/* ホバー時のスタイル */
+.btn-submit:hover {
+  background-color: rgb(220, 140, 60); /* ホバー時の背景色 */
+}

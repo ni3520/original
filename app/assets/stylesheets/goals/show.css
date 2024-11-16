@@ -1,0 +1,15 @@
+
+.calendar-day {
+  position: relative;
+  display: flex;
+  flex-direction: column;  /* 縦方向に並べる */
+  justify-content: space-between;  /* 日付とメモの間にスペースを確保 */
+  height: 100%; /* 高さを100%にして背景色が全体に広がるようにする */
+  box-sizing: border-box; /* paddingが要素の外枠に追加されないようにする */
+}
+
+.memo-content {
+  margin-top: 5px; /* 日付とメモの間に余白を追加 */
+  font-size: 12px;
+  color: #000000;
+}

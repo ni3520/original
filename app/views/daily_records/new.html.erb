@@ -1,2 +1,33 @@
-<h1 class="title">できた</h1>
-<%= link_to 'もどる', goals_path %>
+<%= form_with(model: @daily_record, url: daily_records_path(goal_id: @goal.id), local: true) do |form| %>
+  <div style="text-align: center; margin: 40px;"> <!-- 縦に隙間を追加 -->
+    <h1 style="font-size: 2em; font-weight: bold;">今日の記録</h1> <!-- 太字 -->
+    <h2 style="font-weight: bold;"><%= @goal.title %> - 記録を作成</h2> <!-- 太字 -->
+
+    <!-- レベルのチェックボックス -->
+    <div class="levels" style="margin: 30px 0 20px;">
+      <label>
+        <%= form.radio_button :level_achieved, 1 %> Lv.1: <%= @goal.level_1_value %>
+      </label>
+      <label>
+        <%= form.radio_button :level_achieved, 2 %> Lv.2: <%= @goal.level_2_value %>
+      </label>
+    <label>
+      <%= form.radio_button :level_achieved, 3 %> Lv.3: <%= @goal.level_3_value %>
+    </label>
+  </div>
+    <!-- メモ欄 -->
+    <div style="margin-bottom: 20px;"> <!-- 縦の隙間 -->
+      <%= form.label :memo, "メモ", style: "display: block" %>
+      <%= form.text_area :memo, rows: 4, placeholder: "具体的な記録をメモしてください。", style: "width: 80%; border: 1px solid #ccc; border-radius: 4px;" %> <!-- 白枠の入力フォーム -->
+    </div>
+    <%= form.hidden_field :goal_id, value: @goal.id %>
+
+    <!-- 記録ボタン -->
+    <div>
+      <%= form.submit "記録する", class: 'btn-submit' %>
+    </div>
+    <div style="margin-top: 20px;" class="text-center">
+      <%= link_to 'もどる', goal_path(@goal) %>
+    </div>
+  </div>
+<% end %>
