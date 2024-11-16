@@ -12,8 +12,11 @@
           <%= f.password_field :password, class: "form-control" %>
         </div>
         <div class="text-center">
-        <%= f.submit 'ログイン', class: 'btn btn-green' %>
-        <div class="text-center">
+          <%= f.submit 'ログイン', class: 'btn btn-green' %>
+        </div>
+        <div style="margin-top: 20px;" class="text-center">
+        <%= link_to 'もどる', root_path %>
+      </div>
       <% end %>
     </div>
   </div>
