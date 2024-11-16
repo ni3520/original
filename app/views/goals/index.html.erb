@@ -5,19 +5,23 @@
 
 <h1 class="h1">取組一覧</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>タイトル</th>
-      <th>作成日</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @goals.each do |goal| %>
-      <tr>
-        <th style="writing-mode: vertical-rl; text-align: left;"><%= goal.title %></th>
-        <td><%= goal.created_at.strftime("%Y年%m月%d日") %></td>
+<div class="table-container">
+  <table class="table">
+    <thead>
+      <tr class="tr">
+        <th class="label_title">タイトル</th>
+        <th class="label_date">作成日</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+    <tbody>
+      <% @goals.each do |goal| %>
+        <tr>
+          <td class="th">
+            <%= link_to goal.title, goal_path(goal) %>
+          </td>
+          <td class="td"><%= goal.created_at.strftime("%Y年%m月%d日") %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
