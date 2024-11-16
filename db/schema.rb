@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2024_11_16_033050) do
+ActiveRecord::Schema[8.0].define(version: 2024_11_16_095825) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -21,7 +21,9 @@ ActiveRecord::Schema[8.0].define(version: 2024_11_16_033050) do
     t.date "record_date", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
     t.index ["goal_id"], name: "index_daily_records_on_goal_id"
+    t.index ["user_id"], name: "index_daily_records_on_user_id"
   end
 
   create_table "goals", force: :cascade do |t|
@@ -46,5 +48,6 @@ ActiveRecord::Schema[8.0].define(version: 2024_11_16_033050) do
   end
 
   add_foreign_key "daily_records", "goals"
+  add_foreign_key "daily_records", "users"
   add_foreign_key "goals", "users"
 end

@@ -15,12 +15,21 @@
   </div>
 
   <%= month_calendar do |date| %>
-    <%= date.day %>
+    <% daily_record = DailyRecord.find_by(record_date: date, goal_id: @goal.id) %>
+
+    <div class="calendar-day" style="<%= daily_record ? color_for_level(daily_record.level_achieved) : 'background-color: transparent;' %>;">
+      <%= date.day %>
+
+      <% if daily_record %>
+        <div class="memo-content">
+          <%= daily_record.memo %>
+        </div>
+      <% end %>
+    </div>
   <% end %>
 </div>
 
-<div class="text-center">
-  <%= link_to '記録する', new_daily_record_path, class: 'inline-block px-6 py-2 bg-[rgb(234,160,70)] text-black font-bold rounded-lg hover:bg-[rgb(220,140,60)] transition' %>
+<div class="text-center mt-6">
+  <%= link_to '記録する', new_daily_record_path(goal_id: @goal.id), class: 'inline-block px-6 py-2 bg-[rgb(234,160,70)] text-black font-bold rounded-lg hover:bg-[rgb(220,140,60)] transition' %>
 </div>
-
 

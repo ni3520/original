@@ -1,13 +1,17 @@
 class DailyRecordsController < ApplicationController
+  before_action :set_goal, only: [:new, :create]
 
   def new
-    @daily_record = DailyRecord.new
+    @daily_record = DailyRecord.new(goal: @goal, record_date: Date.today)
   end
 
   def create
-    @daily_record = current_user.daily_record.build(daily_record_params)
+    @daily_record = current_user.daily_records.build(daily_record_params)
+    @daily_record.goal = Goal.find(params[:daily_record][:goal_id])
+    @daily_record.record_date = Date.today
+    
     if @daily_record.save
-      redirect_to goal_path(goal)
+      redirect_to goal_path(@daily_record.goal)
     else
       render :new
     end
@@ -15,7 +19,12 @@ class DailyRecordsController < ApplicationController
 
   private
 
+  def set_goal
+    Rails.logger.debug "Params: #{params.inspect}"
+    @goal = Goal.find(params[:goal_id])
+  end
+
   def daily_record_params
-    params.require(:daily_record).permit(:level_achieved,:memo, :record_date)
+    params.require(:daily_record).permit(:goal_id, :memo, :record_date, :level_achieved)
   end
 end
