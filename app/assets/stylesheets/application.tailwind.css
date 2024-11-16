@@ -6,7 +6,7 @@
 .title {
   text-align: center;  /* 中央揃え */
   font-size: 60px;      /* 少し大きめ */
-  margin-top: 200px;      /*タイトルの上の間隔*/
+  margin-top: 100px;      /*タイトルの上の間隔*/
   margin-bottom: 50px;  /* ボタンとの間隔を空ける */
   font-weight: bold;      /* 太文字 */
 }

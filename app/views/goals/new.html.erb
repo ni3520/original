@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 col-lg-8 mx-auto">
+      <h1 class="h1">取組追加</h1>
+      <%= form_with model: @goal do |f| %>
+        <div class="mb-3">
+          <%= f.label :title, class: "form-label" %>
+          <%= f.text_field :title, class: "form-control" %>
+        </div>
+        <div class="mb-3">
+          <%= f.label :level_1_value, class: "form-label" %>
+          <%= f.text_field :level_1_value, class: "form-control" %>
+        </div>
+        <div class="mb-3">
+          <%= f.label :level_2_value, class: "form-label" %>
+          <%= f.text_field :level_2_value, class: "form-control" %>
+        </div>
+        <div class="mb-3">
+          <%= f.label :level_3_value, class: "form-label" %>
+          <%= f.text_field :level_3_value, class: "form-control" %>
+        </div>
+        <div class="text-center">
+          <%= f.submit "登録", class: "btn btn-green" %>
+        </div>
+      <% end %>
+      <div style="margin-top: 20px;" class="text-center">
+        <%= link_to 'もどる', goals_path %>
+      </div>
+    </div>
+  </div>
+</div>

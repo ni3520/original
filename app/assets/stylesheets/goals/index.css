@@ -10,3 +10,35 @@
   font-size: 40px;      /* 少し大きめ */
   font-weight: bold;      /* 太文字 */
 }
+
+.table-container {
+  margin: 0 auto; /* 中央揃え */
+  max-width: 800px; /* 最大幅を設定 */
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse; /* ボーダーを重ねて表示 */
+}
+
+.label_title, .label_date {
+  padding: 15px; /* セル内の余白 */
+  text-align: left; /* 左揃え */
+  font-weight: bold; /* 太字 */
+}
+
+.td, .th {
+  padding: 15px; /* セル内の余白 */
+  border-bottom: 1px solid #ddd; /* セル下部のボーダー */
+}
+
+.th a {
+  color: #007bff; /* リンクの色 */
+  text-decoration: none; /* 下線を消す */
+  font-size: 30px;
+}
+
+.th a:hover {
+  text-decoration: underline; /* ホバー時の下線 */
+}
+
