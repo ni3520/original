@@ -8,5 +8,6 @@ class User < ApplicationRecord
   validates :email, presence: true, uniqueness: true
 
   has_many :goals
+  has_many :daily_records
 end
 
