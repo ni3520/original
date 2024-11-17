@@ -1,4 +1,4 @@
-class AddUserIdToDailyRecords < ActiveRecord::Migration[8.0]
+class AddUserIdToDailyRecords < ActiveRecord::Migration[7.0]
   def change
     add_column :daily_records, :user_id, :integer
     add_index :daily_records, :user_id
