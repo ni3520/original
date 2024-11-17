@@ -1,0 +1,19 @@
+ja:
+  activerecord:
+    models:
+      user: ユーザー
+    attributes:
+      user:
+        name: 名前
+        email: メールアドレス
+        password: パスワード
+        password_confirmation: パスワード確認
+      user_sessions:
+        email: メールアドレス
+        password: パスワード
+      goal:
+        title: タイトル
+        level_1_value: 目標Lv.1
+        level_2_value: 目標Lv.2
+        level_3_value: 目標Lv.3
+

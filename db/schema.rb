@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema[7.0].define(version: 2024_11_16_095825) do
   # These are extensions that must be enabled in order to support this database
-  enable_extension "pg_catalog.plpgsql"
+  enable_extension "plpgsql"
 
   create_table "daily_records", force: :cascade do |t|
     t.bigint "goal_id", null: false
