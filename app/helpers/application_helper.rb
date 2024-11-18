@@ -4,7 +4,7 @@ module ApplicationHelper
     when 1
       'background-color: lightgreen;'  # Lv.1は薄い緑
     when 2
-      'background-color: green;'       # Lv.2は緑
+      'background-color: #28a746e2;'       # Lv.2は緑
     when 3
       'background-color: darkgreen;'   # Lv.3は濃い緑
     else
