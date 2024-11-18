@@ -13,13 +13,12 @@ class GoalsController < ApplicationController
     if @goal.save
       redirect_to goals_path
     else
-      puts @goal.errors.full_messages # エラーを出力
       render :new
     end
   end
 
   def show
-    @goal = Goal.find(params[:id])
+    @goal = current_user.goals.find(params[:id])
   end
 
   private
