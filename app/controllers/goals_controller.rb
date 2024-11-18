@@ -1,6 +1,7 @@
 class GoalsController < ApplicationController
 
   def index
+    Rails.logger.debug "Current user: #{current_user.inspect}"
     @goals = current_user.goals.includes(:user)
   end
 
