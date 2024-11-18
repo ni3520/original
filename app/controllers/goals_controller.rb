@@ -1,7 +1,7 @@
 class GoalsController < ApplicationController
 
   def index
-    @goals = Goal.includes(:user)
+    @goals = current_user.goals.includes(:user)
   end
 
   def new

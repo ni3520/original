@@ -2,6 +2,7 @@ class DailyRecordsController < ApplicationController
   before_action :set_goal, only: [:new, :create]
 
   def new
+    @goal = current_user.goals.find(params[:goal_id])
     @daily_record = DailyRecord.new(goal: @goal, record_date: Date.today)
   end
 
