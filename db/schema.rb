@@ -21,13 +21,13 @@ ActiveRecord::Schema[7.0].define(version: 2024_11_16_095825) do
     t.date "record_date", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "user_id"
+    t.integer "user_id", null: false
     t.index ["goal_id"], name: "index_daily_records_on_goal_id"
     t.index ["user_id"], name: "index_daily_records_on_user_id"
   end
 
   create_table "goals", force: :cascade do |t|
-    t.bigint "user_id"
+    t.bigint "user_id", null: false
     t.string "title", null: false
     t.string "level_1_value"
     t.string "level_2_value"
