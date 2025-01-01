@@ -9,6 +9,7 @@ class UserSessionsController < ApplicationController
     if @user
       redirect_to goals_path
     else
+      flash.now[:alert] = 'メールアドレスまたはパスワードが間違っています'
       render :new
     end
   end

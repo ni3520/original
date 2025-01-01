@@ -8,7 +8,7 @@ class DailyRecordsController < ApplicationController
 
   def create
     @daily_record = current_user.daily_records.build(daily_record_params)
-    @daily_record.goal = Goal.find(params[:daily_record][:goal_id])
+    @daily_record.goal = @goal
 
     if @daily_record.save
       redirect_to goal_path(@daily_record.goal)
@@ -20,8 +20,7 @@ class DailyRecordsController < ApplicationController
   private
 
   def set_goal
-    Rails.logger.debug "Params: #{params.inspect}"
-    @goal = Goal.find(params[:goal_id])
+    @goal = current_user.goals.find(params[:goal_id])
   end
 
   def daily_record_params
